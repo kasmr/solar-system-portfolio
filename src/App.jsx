@@ -324,7 +324,7 @@ function App() {
           <a href='https://www.linkedin.com/in/alik-krasnorutskiy-9348ba197/'>
             <SiLinkedin size='4rem' />
           </a>
-          <a href='https://drive.google.com/file/d/1z6hfE0e3u2DEzBGxZ93TGdXP3YhXCve_/view?usp=sharing'>
+          <a href='https://drive.google.com/file/d/1skjW75Db1n51soq_AIh5-aXTm7CBS1T7/view?usp=sharing'>
             <FaFilePdf size='4rem' />
           </a>
         </div>
