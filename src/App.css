@@ -3,3 +3,134 @@ canvas {
   top: 0;
   left: 0;
 }
+
+main {
+  width: 100vw;
+  color: white;
+  z-index: 99;
+  position: absolute;
+  width: 100%;
+  margin: 0px auto;
+  padding: 120px 0px;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+h1,
+h2,
+h3,
+blockquote {
+  font-family: elevon, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+i {
+  font-size: 3rem;
+}
+
+img {
+  width: 650px;
+  display: block;
+  margin: auto;
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px transparent solid;
+}
+
+a:hover {
+  border-bottom: 1px white solid;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+header {
+  grid-column: 3 / span 6;
+  font-size: 2.5rem;
+  padding: 2rem;
+  margin-bottom: 1rem;
+}
+
+section {
+  grid-column: 8 / 12;
+  padding: 1rem;
+  background: black;
+  font-size: 2rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+blockquote {
+  margin: 0;
+  padding: 0;
+  grid-column: 2 / span 9;
+  margin-bottom: 1rem;
+}
+
+blockquote p {
+  color: black;
+  background-color: white;
+  font-size: 4rem;
+  display: inline;
+  line-height: 1;
+}
+
+#quote {
+  grid-column: 2 / span 10;
+  margin: 4rem 0 4rem 0;
+}
+#contact {
+  grid-column: 2 / span 11;
+  margin: 4rem 0 4rem 0;
+}
+
+.project {
+  grid-column: 6 / 12;
+}
+
+.about {
+  margin-top: 9rem;
+}
+
+.a-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer {
+  grid-column: 2/12;
+}
+
+.footer a {
+  margin-right: 3rem;
+}
