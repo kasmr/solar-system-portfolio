@@ -45,7 +45,7 @@ function App() {
   }, [window.devicePixelRatio, window.innerHeight, window.innerWidth]);
 
   renderer.setPixelRatio(window.devicePixelRatio);
-  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setSize(window.innerWidth, '100vh');
   camera.position.setZ(30);
 
   const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
