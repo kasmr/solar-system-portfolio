@@ -5,14 +5,12 @@ canvas {
 }
 
 main {
-  width: 100vw;
   color: white;
   z-index: 99;
   position: absolute;
   width: 100%;
   margin: 0px auto;
   padding: 120px 0px;
-
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
@@ -47,7 +45,7 @@ i {
 }
 
 img {
-  width: 650px;
+  width: 100%;
   display: block;
   margin: auto;
 }
@@ -83,7 +81,6 @@ header {
 section {
   grid-column: 8 / 12;
   padding: 1rem;
-  background: black;
   font-size: 2rem;
   line-height: 1.5;
   margin-bottom: 1rem;
@@ -97,11 +94,15 @@ blockquote {
 }
 
 blockquote p {
-  color: black;
-  background-color: white;
   font-size: 4rem;
   display: inline;
   line-height: 1;
+}
+
+#span {
+  background-color: white;
+  color: black;
+  padding: 0.5rem;
 }
 
 #quote {

@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import './App.css';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
@@ -36,6 +37,16 @@ function App() {
   const renderer = new THREE.WebGLRenderer({
     canvas: document.querySelector('#bg'),
   });
+
+  useEffect(() => {
+    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setSize(window.innerWidth, window.innerHeight);
+  }, [
+    renderer,
+    window.devicePixelRatio,
+    window.innerHeight,
+    window.innerWidth,
+  ]);
 
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(window.innerWidth, window.innerHeight);
@@ -170,9 +181,12 @@ function App() {
       <main>
         <header>
           <h1>Hi, I'm Alik Krasnorutskiy</h1>
-          <blockquote>
-            <p>Front End Developer</p>
+
+          <blockquote id='span'>
+            <p>Front End </p>
+            <p> Developer</p>
           </blockquote>
+
           <p>Welcome to my portfolio! 🚀 </p>
         </header>
 
@@ -309,7 +323,7 @@ function App() {
           </div>
         </section>
         <blockquote id='contact'>
-          <p>The ways you can Contact me</p>
+          <p>The ways you can contact me</p>
         </blockquote>
         <div className='footer'>
           <a href='mailto:alikkras@gmail.com'>
