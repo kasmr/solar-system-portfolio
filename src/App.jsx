@@ -41,12 +41,8 @@ function App() {
   useEffect(() => {
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(window.innerWidth, window.innerHeight);
-  }, [
-    renderer,
-    window.devicePixelRatio,
-    window.innerHeight,
-    window.innerWidth,
-  ]);
+    //eslint-disable-next-line
+  }, [window.devicePixelRatio, window.innerHeight, window.innerWidth]);
 
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(window.innerWidth, window.innerHeight);
