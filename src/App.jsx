@@ -176,7 +176,7 @@ function App() {
     <div className='App'>
       <main>
         <header>
-          <h1>Hi, I'm Alik Krasnorutskiy</h1>
+          <h1>Hi, I'm Oleg Krasnorutskiy</h1>
 
           <blockquote id='span'>
             <p>Front End </p>
@@ -334,7 +334,7 @@ function App() {
           <a href='https://www.linkedin.com/in/alik-krasnorutskiy-9348ba197/'>
             <SiLinkedin size='4rem' />
           </a>
-          <a href='https://drive.google.com/file/d/1skjW75Db1n51soq_AIh5-aXTm7CBS1T7/view?usp=sharing'>
+          <a href='https://drive.google.com/file/d/1w0YSlcwksKK5Ru6GypQ0-ZzPK2zpzDRS/view?usp=sharing'>
             <FaFilePdf size='4rem' />
           </a>
         </div>

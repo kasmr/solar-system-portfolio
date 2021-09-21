@@ -188,4 +188,10 @@ blockquote p {
   h1 {
     font-size: 2.5rem;
   }
+
+  canvas {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
 }
