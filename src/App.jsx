@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
@@ -38,14 +38,32 @@ function App() {
     canvas: document.querySelector('#bg'),
   });
 
-  useEffect(() => {
-    renderer.setPixelRatio(window.devicePixelRatio);
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    //eslint-disable-next-line
-  }, [window.devicePixelRatio, window.innerHeight, window.innerWidth]);
+  const getWidth = () =>
+    window.innerWidth ||
+    document.documentElement.clientWidth ||
+    document.body.clientWidth;
+
+  function useCurrentWidth() {
+    let [width, setWidth] = useState(getWidth());
+
+    useEffect(() => {
+      const resizeListener = () => {
+        setWidth(getWidth());
+      };
+
+      window.addEventListener('resize', resizeListener);
+
+      return () => {
+        // remove resize listener
+        window.removeEventListener('resize', resizeListener);
+      };
+    }, []);
+
+    return width;
+  }
 
   renderer.setPixelRatio(window.devicePixelRatio);
-  renderer.setSize(window.innerWidth, '100vh');
+  renderer.setSize(useCurrentWidth(), window.innerHeight);
   camera.position.setZ(30);
 
   const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
@@ -200,7 +218,7 @@ function App() {
           <h2>My key skills</h2>
           <ul>
             <li>
-              Javascript
+              JavaScript
               <SiJavascript color='yellow' size='3rem' />
             </li>
             <li>
@@ -210,16 +228,16 @@ function App() {
               Redux <SiRedux color='#7303f4' size='3rem' />
             </li>
             <li>
-              Typescript <SiTypescript color='#03a9f4' size='3rem' />
+              TypeScript <SiTypescript color='#03a9f4' size='3rem' />
             </li>
             <li>
-              HTML5 <SiHtml5 color='ffa805' size='3rem' />
+              HTML <SiHtml5 color='ffa805' size='3rem' />
             </li>
             <li>
-              CSS3 <FaCss3 color='#03a9f4' size='3rem' />
+              CSS <FaCss3 color='#03a9f4' size='3rem' />
             </li>
             <li>
-              SASS <SiSass color='#FF3396' size='3rem' />
+              Sass <SiSass color='#FF3396' size='3rem' />
             </li>
             <li>
               Bootstrap <SiBootstrap color='#7303f4' size='3rem' />
@@ -228,7 +246,7 @@ function App() {
               Git <FaGitAlt color='ffa805' size='3rem' />
             </li>
             <li>
-              Github <SiGithub size='3rem' />
+              GitHub <SiGithub size='3rem' />
             </li>
           </ul>
         </section>
@@ -263,7 +281,7 @@ function App() {
               rel='noopener noreferrer'
               href='https://github.com/kasmr/coronavirus-chart'
             >
-              Github
+              GitHub
             </a>
           </div>
         </section>
@@ -290,7 +308,7 @@ function App() {
               rel='noopener noreferrer'
               href='https://github.com/kasmr/kinofanat-react-app'
             >
-              Github
+              GitHub
             </a>
           </div>
         </section>
@@ -314,7 +332,7 @@ function App() {
               rel='noopener noreferrer'
               href='https://github.com/kasmr/100-days-of-kasmrs-coding/tree/master/Java-Script-Projects/NetflixLandingPage'
             >
-              Github
+              GitHub
             </a>
           </div>
         </section>
