@@ -47,8 +47,11 @@ function App() {
     let [width, setWidth] = useState(getWidth());
 
     useEffect(() => {
+      let timeoutId = null;
+
       const resizeListener = () => {
-        setWidth(getWidth());
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => setWidth(getWidth()), 150);
       };
 
       window.addEventListener('resize', resizeListener);
