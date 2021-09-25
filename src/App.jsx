@@ -57,7 +57,6 @@ function App() {
       window.addEventListener('resize', resizeListener);
 
       return () => {
-        // remove resize listener
         window.removeEventListener('resize', resizeListener);
       };
     }, []);
@@ -275,7 +274,7 @@ function App() {
             <a
               target='_blank'
               rel='noopener noreferrer'
-              href='https://covid19-chart.web.app/'
+              href='https://coronavirus-chart.vercel.app'
             >
               Live demo
             </a>
