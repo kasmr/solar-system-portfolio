@@ -11,6 +11,7 @@ import mercuryJPG from './assets/mercury.jpeg';
 import project1JPG from './assets/project1.jpeg';
 import project2JPG from './assets/project2.jpeg';
 import project3JPG from './assets/project3.jpeg';
+import project4JPG from './assets/project4.jpeg';
 import { FaReact, FaCss3, FaGitAlt, FaFilePdf } from 'react-icons/fa';
 import { MdMail, MdLocalPhone } from 'react-icons/md';
 import {
@@ -208,12 +209,12 @@ function App() {
 
         <section className='about'>
           <h2>About me</h2>
-          <p>
+          <h4>
             I'm versatile Front-End Developer with experience of implementing
             complex web apps, specializing in SPA development utilizing
             Javascript ecosystem. I like challenges and difficult tasks and
             working with a team of like-minded people.
-          </p>
+          </h4>
         </section>
 
         <section className='light'>
@@ -263,12 +264,12 @@ function App() {
           <h2>Projects</h2>
 
           <h3>Covid-19 tracker</h3>
-          <p>
-            Developes with React, hooks, contextAPI, charts.js and material-UI.
+          <h4>
+            Developed with React, hooks, contextAPI, charts.js and material-UI.
             The app to track amount of people infected with covid. It can show
             information worldwide or by each country. Desktop and mobile layouts
             are available in dark and light mode.
-          </p>
+          </h4>
           <img src={project1JPG} alt='project1' />
           <div className='a-links'>
             <a
@@ -289,13 +290,14 @@ function App() {
         </section>
         <section className='project'>
           <h3>Movie search app</h3>
-          <p>
-            Developed using React, hooks, context API, MVC pattern, Scss,
-            bootstrap and react-router. The app for searching movies in two
-            different languages provides, movie information such as, video
-            trailer, screenshots, user's reviews, similar movies and the cast
-            with ability to get info and filmography of a certain cast member.
-          </p>
+          <h4>
+            Single page application dseveloped using React, hooks, context API,
+            MVC pattern, Scss, bootstrap and react-router. The app for searching
+            movies in two different languages provides, movie information such
+            as, video trailer, screenshots, user's reviews, similar movies and
+            the cast with ability to get info and filmography of a certain cast
+            member.
+          </h4>
           <img src={project2JPG} alt='project2' />
           <div className='a-links'>
             <a
@@ -315,11 +317,38 @@ function App() {
           </div>
         </section>
         <section className='project'>
+          <h3>Recipes app</h3>
+          <h4>
+            Recipes app with authorization, search for recipes, extended search
+            and ability to add to favorites and have it saved in your profile.
+            The app was built with React - Redux on the client side and
+            Node.js/Express on the backend also using MongoDB as database and
+            MaterialUI.
+          </h4>
+          <img src={project4JPG} alt='project4' />
+          <div className='a-links'>
+            <a
+              target='_blank'
+              rel='noopener noreferrer'
+              href='https://recipes-app-mern.herokuapp.com'
+            >
+              Live demo
+            </a>
+            <a
+              target='_blank'
+              rel='noopener noreferrer'
+              href='https://github.com/kasmr/recipes-app'
+            >
+              GitHub
+            </a>
+          </div>
+        </section>
+        <section className='project'>
           <h3>Netflix clone</h3>
-          <p>
+          <h4>
             Developed using plain html, scss, and Javascript. Clone of netflix
             landing page.
-          </p>
+          </h4>
           <img src={project3JPG} alt='project3' />
           <div className='a-links'>
             <a
