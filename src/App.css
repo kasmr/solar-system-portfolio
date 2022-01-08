@@ -126,6 +126,10 @@ blockquote p {
   margin-top: 9rem;
 }
 
+.skills {
+  text-align: center;
+}
+
 .a-links {
   display: flex;
   justify-content: space-around;

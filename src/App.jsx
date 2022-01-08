@@ -9,12 +9,8 @@ import moonJPG from './assets/moon.jpg';
 import sunJPG from './assets/sun.jpg';
 import mercuryJPG from './assets/mercury.jpeg';
 import ReactQuery from './assets/react-query.svg';
-import project1JPG from './assets/project1.jpeg';
-import project2JPG from './assets/project2.jpeg';
-import project3JPG from './assets/project3.jpeg';
-import project4JPG from './assets/project4.jpeg';
 
-import { FaCss3, FaFilePdf, FaGitAlt, FaReact } from 'react-icons/fa';
+import { FaCss3, FaFilePdf, FaGitAlt } from 'react-icons/fa';
 import { MdLocalPhone, MdMail } from 'react-icons/md';
 import {
     SiApollographql,
@@ -24,11 +20,14 @@ import {
     SiJavascript,
     SiLinkedin,
     SiMobx,
+    SiReact,
     SiRedux,
     SiSass,
     SiTailwindcss,
     SiTypescript,
 } from 'react-icons/si';
+import { Projects } from './components/Projects';
+import { Skills } from './components/Skills';
 
 
 function App() {
@@ -204,7 +203,7 @@ function App() {
                 <header>
                     <h1>Hi, I'm Oleg Krasnorutskiy</h1>
 
-                    <blockquote id="span">
+                    <blockquote id="quote">
                         <p>Front End</p>
                         <p> Developer</p>
                     </blockquote>
@@ -221,7 +220,9 @@ function App() {
                         working with a team of like-minded people. </h4>
                 </section>
 
-                <section className="light">
+                <Skills/>
+
+                <section className="skills">
                     <h2>My key skills</h2>
                     <ul>
                         <li>
@@ -229,7 +230,7 @@ function App() {
                             <SiJavascript color="yellow" size="3rem"/>
                         </li>
                         <li>
-                            React <FaReact color="#03a9f4" size="3rem"/>
+                            React <SiReact color="#03a9f4" size="3rem"/>
                         </li>
                         <li>
                             TypeScript <SiTypescript color="#03a9f4" size="3rem"/>
@@ -276,79 +277,9 @@ function App() {
                     </p>
                 </blockquote>
 
-                <section className="project">
-                    <h2>Projects</h2>
 
-                    <h3>Covid-19 tracker</h3>
-                    <h4>
-                        Developed with React, hooks, contextAPI, charts.js and material-UI.
-                        The app to track amount of people infected with covid. It can show
-                        information worldwide or by each country. Desktop and mobile layouts
-                        are available in dark and light mode. </h4>
-                    <img src={project1JPG} alt="project1"/>
-                    <div className="a-links">
-                        <a target="_blank" rel="noopener noreferrer" href="https://coronavirus-chart.vercel.app">
-                            Live demo
-                        </a>
-                        <a target="_blank" rel="noopener noreferrer" href="https://github.com/kasmr/coronavirus-chart">
-                            GitHub
-                        </a>
-                    </div>
-                </section>
-                <section className="project">
-                    <h3>Movie search app</h3>
-                    <h4>
-                        Single page application dseveloped using React, hooks, context API,
-                        MVC pattern, Scss, bootstrap and react-router. The app for searching
-                        movies in two different languages provides, movie information such
-                        as, video trailer, screenshots, user's reviews, similar movies and
-                        the cast with ability to get info and filmography of a certain cast
-                        member. </h4>
-                    <img src={project2JPG} alt="project2"/>
-                    <div className="a-links">
-                        <a target="_blank" rel="noopener noreferrer" href="https://kinofanat-e674f.web.app/">
-                            Live demo
-                        </a>
-                        <a target="_blank"
-                           rel="noopener noreferrer"
-                           href="https://github.com/kasmr/kinofanat-react-app">
-                            GitHub
-                        </a>
-                    </div>
-                </section>
-                <section className="project">
-                    <h3>MacOS like Notes app</h3>
-                    <h4>
-                        Notes with ability to add, delete, update and search for notes.
-                        The app was built with React - Mobx, Antd UI, react-markdown and MDE-editor.
-                    </h4>
-                    <img src={project4JPG} alt="project4"/>
-                    <div className="a-links">
-                        <a target="_blank" rel="noopener noreferrer" href="https://notes-omega-jade.vercel.app">
-                            Live demo
-                        </a>
-                        <a target="_blank" rel="noopener noreferrer" href="https://github.com/kasmr/notes">
-                            GitHub
-                        </a>
-                    </div>
-                </section>
-                <section className="project">
-                    <h3>Netflix clone</h3>
-                    <h4>
-                        Developed using plain html, scss, and Javascript. Clone of netflix
-                        landing page. </h4>
-                    <img src={project3JPG} alt="project3"/>
-                    <div className="a-links">
-                        <a target="_blank" rel="noopener noreferrer" href="https://my-netflix-clone.herokuapp.com/#">
-                            Live demo
-                        </a>
-                        <a target="_blank"
-                           rel="noopener noreferrer"
-                           href="https://github.com/kasmr/100-days-of-kasmrs-coding/tree/master/Java-Script-Projects/NetflixLandingPage">
-                            GitHub
-                        </a>
-                    </div>
-                </section>
+                <Projects/>
+
                 <blockquote id="contact">
                     <p>The ways you can contact me</p>
                 </blockquote>
