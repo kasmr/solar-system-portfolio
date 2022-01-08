@@ -6,7 +6,7 @@ const Header = () => {
         <header>
             <h1>Hi, I'm Oleg Krasnorutskiy</h1>
 
-            <blockquote id="quote">
+            <blockquote>
                 <p>Frontend developer</p>
             </blockquote>
 
