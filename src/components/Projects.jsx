@@ -2,7 +2,7 @@ import React from 'react';
 
 import project1JPG from '../assets/project1.jpeg';
 import project2JPG from '../assets/project2.jpeg';
-import project3JPG from '../assets/project4.jpeg';
+import project3JPG from '../assets/project3.jpeg';
 import project4JPG from '../assets/project4.jpeg';
 
 

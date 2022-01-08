@@ -91,14 +91,13 @@ section {
 }
 
 blockquote {
-  margin: 0;
   padding: 0;
   grid-column: 2 / span 9;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem;
 }
 
 blockquote p {
-  font-size: 4rem;
+  font-size: 3.5rem;
   display: inline;
   line-height: 1;
 }
@@ -122,6 +121,10 @@ blockquote p {
   grid-column: 6 / 12;
 }
 
+.project h3 {
+  margin-top: 2.5rem;
+}
+
 .about {
   margin-top: 9rem;
 }
@@ -136,11 +139,11 @@ blockquote p {
   align-items: center;
 }
 
-.footer {
+.contacts {
   grid-column: 2/12;
 }
 
-.footer a {
+.contacts a {
   margin-right: 3rem;
 }
 
@@ -179,16 +182,16 @@ blockquote p {
     margin: auto;
   }
 
-  .footer {
+  .contacts {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
   }
-  .footer a {
+  .contacts a {
     margin-right: 0;
   }
 
-  .footer svg {
+  .contacts svg {
     width: 3rem;
     height: 3rem;
   }

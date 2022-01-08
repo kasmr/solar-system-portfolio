@@ -1,36 +1,25 @@
 import { useEffect, useState } from 'react';
-import './App.css';
+
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+
+import { Projects } from './components/Projects';
+import { Skills } from './components/Skills';
+
+import './App.css';
+
 import spaceJPG from './assets/space.jpg';
 import marsJPG from './assets/mars.jpg';
 import earthJPG from './assets/earth.jpg';
 import moonJPG from './assets/moon.jpg';
 import sunJPG from './assets/sun.jpg';
 import mercuryJPG from './assets/mercury.jpeg';
-import ReactQuery from './assets/react-query.svg';
-
-import { FaCss3, FaFilePdf, FaGitAlt } from 'react-icons/fa';
-import { MdLocalPhone, MdMail } from 'react-icons/md';
-import {
-    SiApollographql,
-    SiGithub,
-    SiGraphql,
-    SiHtml5,
-    SiJavascript,
-    SiLinkedin,
-    SiMobx,
-    SiReact,
-    SiRedux,
-    SiSass,
-    SiTailwindcss,
-    SiTypescript,
-} from 'react-icons/si';
-import { Projects } from './components/Projects';
-import { Skills } from './components/Skills';
+import { Header } from './components/Header';
+import { About } from './components/About';
+import { Contacts } from './components/Contacts';
 
 
-function App() {
+const App = () => {
     const scene = new THREE.Scene();
 
     const camera = new THREE.PerspectiveCamera(
@@ -200,109 +189,24 @@ function App() {
     return (
         <div className="App">
             <main>
-                <header>
-                    <h1>Hi, I'm Oleg Krasnorutskiy</h1>
-
-                    <blockquote id="quote">
-                        <p>Front End</p>
-                        <p> Developer</p>
-                    </blockquote>
-
-                    <p>Welcome to my portfolio! 🚀</p>
-                </header>
-
-                <section className="about">
-                    <h2>About me</h2>
-                    <h4>
-                        I'm versatile Front-End Developer with experience of implementing
-                        complex web apps, specializing in SPA development utilizing
-                        Javascript ecosystem. I like challenges and difficult tasks and
-                        working with a team of like-minded people. </h4>
-                </section>
-
+                <Header/>
+                <About/>
                 <Skills/>
 
-                <section className="skills">
-                    <h2>My key skills</h2>
-                    <ul>
-                        <li>
-                            JavaScript
-                            <SiJavascript color="yellow" size="3rem"/>
-                        </li>
-                        <li>
-                            React <SiReact color="#03a9f4" size="3rem"/>
-                        </li>
-                        <li>
-                            TypeScript <SiTypescript color="#03a9f4" size="3rem"/>
-                        </li>
-                        <li>
-                            GraphQl <SiGraphql color="#ff3396" size="3rem"/>
-                        </li>
-                        <li>
-                            Apollo <SiApollographql size="3rem"/>
-                        </li>
-                        <li>
-                            React Query <img alt="react-query" width={48} height={48} src={ReactQuery}/>
-                        </li>
-                        <li>
-                            Mobx <SiMobx color="ffa805" size="3rem"/>
-                        </li>
-                        <li>
-                            Redux <SiRedux color="#7303f4" size="3rem"/>
-                        </li>
-                        <li>
-                            HTML <SiHtml5 color="ffa805" size="3rem"/>
-                        </li>
-                        <li>
-                            CSS <FaCss3 color="#03a9f4" size="3rem"/>
-                        </li>
-                        <li>
-                            Sass <SiSass color="#ff3396" size="3rem"/>
-                        </li>
-                        <li>
-                            Tailwind CSS <SiTailwindcss color="#03a9f4" size="3rem"/>
-                        </li>
-                        <li>
-                            Git <FaGitAlt color="ffa805" size="3rem"/>
-                        </li>
-                        <li>
-                            GitHub <SiGithub size="3rem"/>
-                        </li>
-                    </ul>
-                </section>
-
                 <blockquote id="quote">
-                    <p>
-                        “Expect the best, plan for the worst, and prepare to be surprised.”
-                    </p>
+                    <p>“Expect the best, plan for the worst, and prepare to be surprised.”</p>
                 </blockquote>
-
 
                 <Projects/>
 
                 <blockquote id="contact">
                     <p>The ways you can contact me</p>
                 </blockquote>
-                <div className="footer">
-                    <a href="mailto:alikkras@gmail.com">
-                        <MdMail size="4rem"/>
-                    </a>
-                    <a href="tel:+79002892643">
-                        <MdLocalPhone size="4rem"/>
-                    </a>
-                    <a href="https://github.com/kasmr">
-                        <SiGithub size="4rem"/>
-                    </a>
-                    <a href="https://www.linkedin.com/in/alik-krasnorutskiy-9348ba197/">
-                        <SiLinkedin size="4rem"/>
-                    </a>
-                    <a href="https://drive.google.com/file/d/1w0YSlcwksKK5Ru6GypQ0-ZzPK2zpzDRS/view?usp=sharing">
-                        <FaFilePdf size="4rem"/>
-                    </a>
-                </div>
+
+                <Contacts/>
             </main>
         </div>
     );
-}
+};
 
-export default App;
+export { App };

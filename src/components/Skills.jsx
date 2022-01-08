@@ -1,7 +1,7 @@
 import React from 'react';
+
 import {
     SiApollographql,
-    SiGithub,
     SiGraphql,
     SiHtml5,
     SiJavascript,
@@ -9,22 +9,87 @@ import {
     SiReact,
     SiRedux,
     SiSass,
+    SiStyledcomponents,
     SiTailwindcss,
     SiTypescript,
 } from 'react-icons/si';
-import ReactQuery from '../assets/react-query.svg';
 import { FaCss3, FaGitAlt } from 'react-icons/fa';
+
+import ReactQuery from '../assets/react-query.svg';
 
 
 const Skills = () => {
 
-    const size = '3rem';
+    const size = '4rem';
 
     const skills = [
         {
             text: 'JavaScript',
-            reactElement: <SiJavascript/>,
+            icon: <SiJavascript/>,
             color: '#ffff00',
+        },
+        {
+            text: 'React ',
+            icon: <SiReact/>,
+            color: '#03a9f4',
+        },
+        {
+            text: 'TypeScript',
+            icon: <SiTypescript/>,
+            color: '#03a9f4',
+        },
+        {
+            text: 'Mobx',
+            icon: <SiMobx/>,
+            color: 'ffa805',
+        },
+        {
+            text: 'Redux',
+            icon: <SiRedux/>,
+            color: '#7303f4',
+        },
+        {
+            text: 'GraphQl',
+            icon: <SiGraphql/>,
+            color: '#ff3396',
+        },
+        {
+            text: 'Apollo',
+            icon: <SiApollographql/>,
+        },
+        {
+            text: 'React Query',
+            icon: <img alt="react-query" width={64} height={64} src={ReactQuery}/>,
+        },
+        {
+            text: 'CSS',
+            icon: <FaCss3/>,
+            color: '#03a9f4',
+        },
+        {
+            text: 'Sass',
+            icon: <SiSass/>,
+            color: '#ff3396',
+        },
+        {
+            text: 'Tailwind CSS',
+            icon: <SiTailwindcss/>,
+            color: '#03a9f4',
+        },
+        {
+            text: 'Styled-components',
+            icon: <SiStyledcomponents/>,
+            color: '#deb887',
+        },
+        {
+            text: 'HTML',
+            icon: <SiHtml5/>,
+            color: 'ffa805',
+        },
+        {
+            text: 'Git',
+            icon: <FaGitAlt/>,
+            color: 'ffa805',
         },
     ];
 
@@ -32,55 +97,12 @@ const Skills = () => {
         <section className="skills">
             <h2>My key skills</h2>
             <ul>
-                {skills.map(({ text, reactElement, color }) => (
-                    <li>
+                {skills.map(({ text, icon, color }) => (
+                    <li key={text}>
                         {text}
-                        {reactElement}
+                        {React.isValidElement(icon) && React.cloneElement(icon, { size, color })}
                     </li>
                 ))}
-                <li>
-                    JavaScript
-                    <SiJavascript color="yellow" size="3rem"/>
-                </li>
-                <li>
-                    React <SiReact color="#03a9f4" size="3rem"/>
-                </li>
-                <li>
-                    TypeScript <SiTypescript color="#03a9f4" size="3rem"/>
-                </li>
-                <li>
-                    GraphQl <SiGraphql color="#ff3396" size="3rem"/>
-                </li>
-                <li>
-                    Apollo <SiApollographql size="3rem"/>
-                </li>
-                <li>
-                    React Query <img alt="react-query" width={48} height={48} src={ReactQuery}/>
-                </li>
-                <li>
-                    Mobx <SiMobx color="ffa805" size="3rem"/>
-                </li>
-                <li>
-                    Redux <SiRedux color="#7303f4" size="3rem"/>
-                </li>
-                <li>
-                    HTML <SiHtml5 color="ffa805" size="3rem"/>
-                </li>
-                <li>
-                    CSS <FaCss3 color="#03a9f4" size="3rem"/>
-                </li>
-                <li>
-                    Sass <SiSass color="#ff3396" size="3rem"/>
-                </li>
-                <li>
-                    Tailwind CSS <SiTailwindcss color="#03a9f4" size="3rem"/>
-                </li>
-                <li>
-                    Git <FaGitAlt color="ffa805" size="3rem"/>
-                </li>
-                <li>
-                    GitHub <SiGithub size="3rem"/>
-                </li>
             </ul>
         </section>
     );
