@@ -6,23 +6,38 @@ import { FaFilePdf } from 'react-icons/fa';
 
 
 const Contacts = () => {
+
+    const contacts = [
+        {
+            link: 'mailto:alikkras@gmail.com',
+            icon: <MdMail size="4rem"/>,
+        },
+        {
+            link: 'tel:+79002892643',
+            icon: <MdLocalPhone size="4rem"/>,
+        },
+        {
+            link: 'https://github.com/kasmr',
+            icon: <SiGithub size="4rem"/>,
+        },
+        {
+            link: 'https://www.linkedin.com/in/alik-krasnorutskiy-9348ba197/',
+            icon: <SiLinkedin size="4rem"/>,
+        },
+        {
+            link: 'https://drive.google.com/file/d/1vuVuctAAQmw06J6zBAFedhrTk1M-e9Xx/view?usp=sharing',
+            icon: <FaFilePdf size="4rem"/>,
+        },
+
+    ];
+
     return (
         <div className="contacts">
-            <a href="mailto:alikkras@gmail.com">
-                <MdMail size="4rem"/>
-            </a>
-            <a href="tel:+79002892643">
-                <MdLocalPhone size="4rem"/>
-            </a>
-            <a href="https://github.com/kasmr">
-                <SiGithub size="4rem"/>
-            </a>
-            <a href="https://www.linkedin.com/in/alik-krasnorutskiy-9348ba197/">
-                <SiLinkedin size="4rem"/>
-            </a>
-            <a href="https://drive.google.com/file/d/1OIpkp9v21woAhmHNadacfvHOt_R7_WHa/view?usp=sharing">
-                <FaFilePdf size="4rem"/>
-            </a>
+            {contacts.map(({ link, icon }) => (
+                <a key={link} href={link} rel="noreferrer" target="_blank">
+                    {icon}
+                </a>
+            ))}
         </div>
     );
 };

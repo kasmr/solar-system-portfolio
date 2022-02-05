@@ -53,7 +53,7 @@ const Projects = () => {
         <section className="project">
             <h2>Projects</h2>
             {projects.map(({ title, description, image, demoLink, githubLink }) => (
-                <>
+                <React.Fragment key={demoLink}>
                     <h3>{title}</h3>
                     <h4>{description}</h4>
                     <img src={image} alt={title}/>
@@ -65,7 +65,7 @@ const Projects = () => {
                             GitHub
                         </a>
                     </div>
-                </>
+                </React.Fragment>
             ))}
         </section>
     );

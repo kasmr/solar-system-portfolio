@@ -6,6 +6,7 @@ import { Skills } from './components/Skills';
 import { Header } from './components/Header';
 import { About } from './components/About';
 import { Contacts } from './components/Contacts';
+import { Blockquote } from './components/Blockquote';
 
 
 const App = () => {
@@ -17,17 +18,9 @@ const App = () => {
                 <Header/>
                 <About/>
                 <Skills/>
-
-                <blockquote id="quote">
-                    <p>“Expect the best, plan for the worst, and prepare to be surprised.”</p>
-                </blockquote>
-
+                <Blockquote id="quote" text="“Expect the best, plan for the worst, and prepare to be surprised.”"/>
                 <Projects/>
-
-                <blockquote id="contact">
-                    <p>The ways you can contact me</p>
-                </blockquote>
-
+                <Blockquote id="contact" text="The ways you can contact me"/>
                 <Contacts/>
             </main>
         </div>
