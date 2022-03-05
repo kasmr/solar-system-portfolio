@@ -13,10 +13,6 @@ const Contacts = () => {
             icon: <MdMail size="4rem"/>,
         },
         {
-            link: 'tel:+79002892643',
-            icon: <MdLocalPhone size="4rem"/>,
-        },
-        {
             link: 'https://github.com/kasmr',
             icon: <SiGithub size="4rem"/>,
         },
