@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { MdLocalPhone, MdMail } from 'react-icons/md';
+import { MdMail } from 'react-icons/md';
 import { SiGithub, SiLinkedin } from 'react-icons/si';
 import { FaFilePdf } from 'react-icons/fa';
 
@@ -17,11 +17,11 @@ const Contacts = () => {
             icon: <SiGithub size="4rem"/>,
         },
         {
-            link: 'https://www.linkedin.com/in/alik-krasnorutskiy-9348ba197/',
+            link: 'https://www.linkedin.com/in/oleg-krasnorutskiy/',
             icon: <SiLinkedin size="4rem"/>,
         },
         {
-            link: 'https://drive.google.com/file/d/1vuVuctAAQmw06J6zBAFedhrTk1M-e9Xx/view?usp=sharing',
+            link: 'https://drive.google.com/file/d/1xsvJ8BCSQlHnlXpBSZPQvBkk9W7lhjmC/view?usp=sharing',
             icon: <FaFilePdf size="4rem"/>,
         },
 

@@ -10,14 +10,12 @@ const Projects = () => {
 
     const projects = [
         {
-            title: 'Covid-19 tracker',
-            description: 'Developed with React, hooks, contextAPI, charts.js and material-UI.\n' +
-                '            The app to track amount of people infected with covid. It can show\n' +
-                '            information worldwide or by each country. Desktop and mobile layouts\n' +
-                '            are available in dark and light mode.',
-            image: project1JPG,
-            demoLink: 'https://coronavirus-chart.vercel.app',
-            githubLink: 'https://github.com/kasmr/coronavirus-chart',
+            title: 'MacOS like Notes app',
+            description: 'Single page application was built with React, Mobx, Antd UI, react-markdown and MDE-editor. ' +
+                'You can to add, delete, edit and search for notes.',
+            image: project3JPG,
+            demoLink: 'https://notes-omega-jade.vercel.app',
+            githubLink: 'https://github.com/kasmr/notes',
         },
         {
             title: 'Movie search app',
@@ -32,12 +30,14 @@ const Projects = () => {
             githubLink: 'https://github.com/kasmr/kinofanat-react-app',
         },
         {
-            title: 'MacOS like Notes app',
-            description: 'Notes with ability to add, delete, update and search for notes.\n' +
-                '            The app was built with React - Mobx, Antd UI, react-markdown and MDE-editor.',
-            image: project3JPG,
-            demoLink: 'https://notes-omega-jade.vercel.app',
-            githubLink: 'https://github.com/kasmr/notes',
+            title: 'Covid-19 tracker',
+            description: 'Developed with React, hooks, contextAPI, charts.js and material-UI.\n' +
+                '            The app to track amount of people infected with covid. It can show\n' +
+                '            information worldwide or by each country. Desktop and mobile layouts\n' +
+                '            are available in dark and light mode.',
+            image: project1JPG,
+            demoLink: 'https://coronavirus-chart.vercel.app',
+            githubLink: 'https://github.com/kasmr/coronavirus-chart',
         },
         {
             title: 'Netflix clone',
