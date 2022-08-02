@@ -12,13 +12,15 @@ const App = () => {
     Three();
 
     return (
-        <main>
-            <Header/>
-            <About/>
-            <Skills/>
-            <Projects/>
-            <Contacts/>
-        </main>
+        <div className="App">
+            <main>
+                <Header/>
+                <About/>
+                <Skills/>
+                <Projects/>
+                <Contacts/>
+            </main>
+        </div>
     );
 };
 
