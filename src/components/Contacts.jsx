@@ -4,6 +4,8 @@ import { MdMail } from 'react-icons/md';
 import { SiGithub, SiLinkedin } from 'react-icons/si';
 import { FaFilePdf } from 'react-icons/fa';
 
+import { Blockquote } from './Blockquote';
+
 
 const Contacts = () => {
 
@@ -28,13 +30,17 @@ const Contacts = () => {
     ];
 
     return (
-        <div className="contacts">
-            {contacts.map(({ link, icon }) => (
-                <a key={link} href={link} rel="noreferrer" target="_blank">
-                    {icon}
-                </a>
-            ))}
-        </div>
+        <>
+            <Blockquote id="contact" text="The ways you can contact me"/>
+
+            <div className="contacts">
+                {contacts.map(({ link, icon }) => (
+                    <a key={link} href={link} rel="noreferrer" target="_blank">
+                        {icon}
+                    </a>
+                ))}
+            </div>
+        </>
     );
 };
 

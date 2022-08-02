@@ -148,8 +148,20 @@ blockquote p {
 }
 
 @media screen and (max-width: 768px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  blockquote {
+    -webkit-text-stroke: unset;
+  }
+
   main {
     display: block;
+  }
+
+  canvas {
+    height: 100vh !important;
   }
 
   section {
@@ -166,7 +178,7 @@ blockquote p {
   }
 
   .about {
-    margin-top: 20rem;
+    margin-top: 25rem;
   }
 
   #quote {
@@ -186,6 +198,7 @@ blockquote p {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    margin-bottom: -50px;
   }
   .contacts a {
     margin-right: 0;
