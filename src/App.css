@@ -309,6 +309,8 @@ a span:hover:nth-child(1) {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
     }
 
     .contacts a {
