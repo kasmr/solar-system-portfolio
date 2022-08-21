@@ -13,11 +13,11 @@ import mercuryJPG from './assets/mercury.jpeg';
 
 const Three = () => {
     const scene = new THREE.Scene();
-    const acpect = window.innerWidth < 728 ? 0.4 : (window.innerWidth / window.innerHeight);
+    const aspect = window.innerWidth < 728 ? 0.5 : (window.innerWidth / window.innerHeight);
 
     const camera = new THREE.PerspectiveCamera(
         75,
-        acpect,
+        aspect,
         0.1,
         1000,
     );
