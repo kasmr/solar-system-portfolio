@@ -206,6 +206,10 @@ a span:nth-child(6) {
     text-shadow: 3px 3px 0 rgba(244, 67, 54, 1);
 }
 
+a span:nth-child(9) {
+    transition-delay: .6s;
+}
+
 a span:nth-child(8) {
     transition-delay: .525s;
 }
@@ -325,4 +329,15 @@ a span:hover:nth-child(1) {
     h1 {
         font-size: 2.5rem;
     }
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.private {
+    border-bottom: none;
+    font-size: 1rem;
+    margin-left: 0.5rem;
 }
