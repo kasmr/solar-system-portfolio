@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import project1JPG from '../assets/project1.jpeg';
 import project2JPG from '../assets/project2.jpeg';
 import project3JPG from '../assets/project3.jpeg';
 import project4JPG from '../assets/project4.jpeg';
+import { useInView } from 'react-intersection-observer';
+import { motion, useAnimation } from 'framer-motion';
 
 
 const Projects = () => {
@@ -46,14 +48,25 @@ const Projects = () => {
             demoLink: 'https://my-netflix-clone.herokuapp.com/#',
             githubLink: 'https://github.com/kasmr/100-days-of-kasmrs-coding/tree/master/Java-Script-Projects/NetflixLandingPage',
         },
-
     ];
 
+    const { ref, inView } = useInView();
+    const animation = useAnimation();
+
+    const variants = {
+        visible: { opacity: 1, transition: { duration: 1 } },
+        hidden: { opacity: 0 },
+    };
+
+    useEffect(() => {
+        inView && animation.start('visible');
+    }, [ inView, animation ]);
+
     return (
-        <section className="project">
-            <h2>Projects</h2>
+        <section ref={ref} className="project">
+            <motion.h2 initial="hidden" variants={variants} animate={animation}>Projects</motion.h2>
             {projects.map(({ title, description, image, demoLink, githubLink }) => (
-                <React.Fragment key={demoLink}>
+                <motion.div initial="hidden" variants={variants} animate={animation} key={demoLink}>
                     <h3>{title}</h3>
                     <h4>{description}</h4>
                     <img src={image} alt={title}/>
@@ -78,7 +91,7 @@ const Projects = () => {
                             <span>b</span>
                         </a>
                     </div>
-                </React.Fragment>
+                </motion.div>
             ))}
         </section>
     );

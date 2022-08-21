@@ -1,4 +1,7 @@
-import React, { cloneElement } from 'react';
+import React, { cloneElement, useEffect } from 'react';
+
+import { useInView } from 'react-intersection-observer';
+import { motion, useAnimation } from 'framer-motion';
 
 import { Blockquote } from './Blockquote';
 
@@ -33,11 +36,23 @@ const Contacts = () => {
         },
     ];
 
+    const { ref, inView } = useInView();
+    const animation = useAnimation();
+
+    const variants = {
+        visible: { opacity: 1, transition: { duration: 1 } },
+        hidden: { opacity: 0 },
+    };
+
+    useEffect(() => {
+        inView && animation.start('visible');
+    }, [ inView, animation ]);
+
     return (
         <>
             <Blockquote id="contact" text="The ways you can contact me"/>
 
-            <div className="contacts">
+            <motion.div ref={ref} initial="hidden" variants={variants} animate={animation} className="contacts">
                 {contacts.map(({ link, icon, text }) => (
                     <div key={link}>
                         <a href={link} rel="noreferrer" target="_blank">
@@ -47,7 +62,7 @@ const Contacts = () => {
                         <p>{text}</p>
                     </div>
                 ))}
-            </div>
+            </motion.div>
         </>
     );
 };

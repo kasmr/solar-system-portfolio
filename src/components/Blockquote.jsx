@@ -1,9 +1,9 @@
 import React from 'react';
 
 
-const Blockquote = ({ id, text }) => {
+const Blockquote = ({ id, text, ...rest }) => {
     return (
-        <blockquote id={id}>
+        <blockquote id={id} {...rest}>
             <p>{text}</p>
         </blockquote>
     );

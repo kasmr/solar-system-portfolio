@@ -161,8 +161,8 @@ blockquote p {
 }
 
 .animate {
-    animation: icon3d 200ms 10;
-    -webkit-animation: icon3d 200ms 10;
+    animation: icon3d 200ms 15;
+    -webkit-animation: icon3d 200ms 15;
 }
 
 a span {

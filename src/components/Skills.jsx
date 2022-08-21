@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+
+import { useInView } from 'react-intersection-observer';
+import { motion, useAnimation } from 'framer-motion';
 
 import {
     SiApollographql,
@@ -93,17 +96,31 @@ const Skills = () => {
         },
     ];
 
+    const { ref, inView } = useInView({ threshold: 0.2 });
+    const animation = useAnimation();
+
+    const variants = {
+        visible: { opacity: 1, transition: { duration: 1 } },
+        hidden: { opacity: 0 },
+    };
+
+    useEffect(() => {
+        inView && animation.start('visible');
+    }, [ inView, animation ]);
+
     return (
-        <section className="skills">
-            <h2>My key skills</h2>
-            <ul>
+        <section ref={ref} className="skills">
+            <motion.h2 initial="hidden" variants={variants} animate={animation}>
+                My key skills
+            </motion.h2>
+            <motion.ul initial="hidden" variants={variants} animate={animation}>
                 {skills.map(({ text, icon, color }) => (
                     <li key={text}>
                         {text}
                         {React.isValidElement(icon) && React.cloneElement(icon, { size, color })}
                     </li>
                 ))}
-            </ul>
+            </motion.ul>
         </section>
     );
 };
