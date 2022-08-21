@@ -58,11 +58,24 @@ const Projects = () => {
                     <h4>{description}</h4>
                     <img src={image} alt={title}/>
                     <div className="a-links">
-                        <a target="_blank" rel="noopener noreferrer" href={demoLink}>
-                            Live demo
+                        <a className="demo" target="_blank" rel="noopener noreferrer" href={demoLink}>
+                            <span>L</span>
+                            <span>i</span>
+                            <span>v</span>
+                            <span>e</span>
+                            &nbsp;
+                            <span>d</span>
+                            <span>e</span>
+                            <span>m</span>
+                            <span>o</span>
                         </a>
-                        <a target="_blank" rel="noopener noreferrer" href={githubLink}>
-                            GitHub
+                        <a className="github" target="_blank" rel="noopener noreferrer" href={githubLink}>
+                            <span>G</span>
+                            <span>i</span>
+                            <span>t</span>
+                            <span>H</span>
+                            <span>u</span>
+                            <span>b</span>
                         </a>
                     </div>
                 </React.Fragment>

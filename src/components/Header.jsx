@@ -4,7 +4,7 @@ import React from 'react';
 const Header = () => {
     return (
         <header>
-            <h1>Hi, I'm Oleg Krasnorutskiy</h1>
+            <h1 className='animate'>Hi, I'm Oleg Krasnorutskiy</h1>
 
             <blockquote>
                 <p>Frontend developer</p>
