@@ -13,10 +13,11 @@ import mercuryJPG from './assets/mercury.jpeg';
 
 const Three = () => {
     const scene = new THREE.Scene();
+    const acpect = window.innerWidth < 728 ? 0.4 : (window.innerWidth / window.innerHeight);
 
     const camera = new THREE.PerspectiveCamera(
         75,
-        window.innerWidth / window.innerHeight,
+        acpect,
         0.1,
         1000,
     );
@@ -49,11 +50,11 @@ const Three = () => {
         }, []);
 
         return width;
-    }
+    };
 
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(useCurrentWidth(), window.innerHeight);
-    camera.position.setZ(30);
+    camera.position.setZ(0);
 
     const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
     const material = new THREE.MeshStandardMaterial({
@@ -74,7 +75,7 @@ const Three = () => {
         controls.update();
 
         renderer.render(scene, camera);
-    }
+    };
 
     const ambientLight = new THREE.AmbientLight(0xffffff);
 
@@ -93,7 +94,7 @@ const Three = () => {
 
         star.position.set(x, y, z);
         scene.add(star);
-    }
+    };
 
     Array(200).fill(0).forEach(addStar);
 
