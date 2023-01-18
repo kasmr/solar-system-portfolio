@@ -15,12 +15,12 @@ const Contacts = () => {
             text: 'Mail',
         },
         {
-            link: 'https://drive.google.com/file/d/1xsvJ8BCSQlHnlXpBSZPQvBkk9W7lhjmC/view?usp=sharing',
+            link: 'https://t.me/kasmrxaxaxa',
             icon: <i className="fab fa-telegram-plane"/>,
             text: 'Telegram',
         },
         {
-            link: 'https://www.linkedin.com/in/oleg-krasnorutskiy/',
+            link: 'https://www.linkedin.com/in/alik-krasnorutskiy/',
             icon: <i className="fab fa-linkedin"/>,
             text: 'LinkedIn',
         },
@@ -30,7 +30,7 @@ const Contacts = () => {
             text: 'Github',
         },
         {
-            link: 'https://drive.google.com/file/d/1xsvJ8BCSQlHnlXpBSZPQvBkk9W7lhjmC/view?usp=sharing',
+            link: 'https://drive.google.com/file/d/1WUL3G75v59THTATl0lE9-FVTfVJZfE4-/view?usp=sharing',
             icon: <i className="fas fa-file-pdf"/>,
             text: 'Resume',
         },

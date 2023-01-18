@@ -24,10 +24,14 @@ const About = () => {
                 About me
             </motion.h2>
             <motion.h4 initial="hidden" variants={variants} animate={animation}>
-                I'm versatile Front-End Developer with experience of implementing
-                complex web apps, specializing in SPA development utilizing
-                Javascript ecosystem. I like challenges and difficult tasks and
-                working with a team of like-minded people.
+                I convert good mood 😃 and coffee ☕ into beautiful code.
+            </motion.h4>
+            <motion.h4 initial="hidden" variants={variants} animate={animation}>
+                I'm a frontend developer with 3+ years of experience in implementing complex web apps, specializing in
+                SPA functional and performant user interfaces. I like to solve difficult problems and work in a team of
+                like-minded people. I always focus on high code quality providing modern and best solutions based on the
+                best practices. I strive to be up to date with the latest technologies and enjoy every bit of learning
+                them.
             </motion.h4>
         </section>
     );

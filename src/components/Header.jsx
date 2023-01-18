@@ -30,7 +30,7 @@ const Header = () => {
     return (
         <header ref={ref}>
             <motion.h1 initial="hidden" variants={h1} animate={animation} className="animate">
-                Hi, I'm Oleg Krasnorutskiy
+                Hi, I'm Alik Krasnorutskiy
             </motion.h1>
 
             <motion.blockquote initial="hidden" variants={blockquote} animate={animation}>
